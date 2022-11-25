@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    background: #fff;
+    font-size: 15px;
+    line-height: 22px;
+    color: #555555;
+}
+ul{
+    text-decoration: none;
+}
+li{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+.header{
+    width: 100%;
+    height: 780px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.header .logo img{
+    height: 62px;
+    width: 75px;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+.header .name{
+    font-size: 22px;
+    color: rgba(7, 80, 216, 0.904);
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+/***********Navigation***************/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 30px;
+    background-color: #fff;
+    box-shadow: 2px 2px 20px rgba(255,151,103,0.164);
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    font-family: 'Lora', serif;
+}
+nav ul{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+nav ul li a{
+    height: 40px;
+    line-height: 43px;
+    margin: 8px;
+    padding: 0px 10px;
+    display: flex;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #0c0b0b;
+    letter-spacing: 1px;
+    transition: 0.4s ease-in-out;
+}
+nav ul li a:hover{
+    border-radius: 5px;
+    background-color: rgba(5, 126, 196, 0.904);
+    color: #fff;
+    box-shadow: 5px 10px 30px rgba(64, 159, 238, 0.678);
+}
+.header-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+}
+.header-img{
+    width: 450px;
+    height: 500px;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+.header-text{
+    width: 500px;
+    margin-bottom: 75px;
+    margin-right: 40px;
+}
+.header-text h2{
+    margin-top: 30px;
+    font-size: 27px;
+    font-weight: 900;
+    color: rgb(31, 30, 30);
+    list-style: 55px;
+    font-family: 'Nunito', sans-serif;
+    padding-bottom: 10px;
+    margin-bottom: 34px;
+}
+.header-text h1{
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(31, 30, 30);
+    list-style: 55px;
+    margin-bottom: 34px;
+    padding-bottom: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+.header-text p{
+    font-size: 21px;
+    font-weight: 300;
+    color: rgb(8, 84, 184);
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 0.6px;
+}
+.header-btn{
+    width: 150px;
+    height: 47px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(19, 88, 179);
+    color: #fff;
+    box-shadow: 5px 10px 30px rgba(64, 159, 238, 0.678);
+    text-transform: uppercase;
+    transition: 0.4 ease-in-out;
+    border-radius: 4px;
+    margin-top: 26px;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+.instructions{
+    background-size: 1000px;
+    background-position: center;
+}
+.instruction-heading{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.instruction-heading h1{
+    line-height: 55px;
+    font-size:45px;
+    color: #0c0b0b;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+    margin: 0px;
+}
+.box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 360px;
+    height: 300px;
+    box-shadow: 2px 2px 20px rgba(255,151,103,0.164);
+    border-radius: 10px;
+    background-color:rgb(250, 250, 250);
+}
+.box img{
+    width: 50px;
+    height: 50px;
+}
+.box h3{
+    font-size: 25px;
+    color: black;
+    margin-top: 20px;
+    letter-spacing: 0.4px;
+}
+.box p{
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: black;
+    margin-top: 10px;
+}
+.box:hover{
+    background-color:rgba(5, 106, 189, 0.89) ;
+    transition: 0.4s ease-in-out;
+}

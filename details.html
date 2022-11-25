@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" 
+    integrity="undefined" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+</head>
+<body>
+    <section class="section">
+    <div class="details" id="resume-form">
+        <!-------heading------>
+        <div class="heading">
+            <h1>Fill your details</h1>
+        </div>
+       
+        <div class="parent">
+         <!---------personal details------->
+        <div class="personal-details">
+              <h1>Personal Details</h1>
+           <form action="">
+            <div class="form-group">
+                <label for="nameField">Name:</label>
+                <input type="text" class="form-control" id="nameField">
+            </div>
+            <div class="form-group">
+                <label for="contactField">Contact:</label>
+                <input type="text" class="form-control" id="contactField">
+            </div>
+            <div class="form-group">
+                <label for="AddressField">Address:</label>
+                <input type="text" class="form-control" id="AddressField" rows="2">
+            </div>
+            <div class="form-group" id="line">
+                <label for="gmailField">Gmail id:</label>
+                <input type="text" class="form-control" id="gmailField">
+            </div>
+
+
+            <div class="form-group">
+                <label for="fbField">Facebook:</label>
+                <input type="text" class="form-control" id="fbField">
+            </div>
+            <div class="form-group">
+                <label for="linkedinField">LinkedIn:</label>
+                <input type="text" class="form-control" id="linkedinField">
+            </div>
+            <div class="form-group">
+                <label for="githubField">Github:</label>
+                <input type="text" class="form-control" id="githubField">
+            </div>
+
+            <div class="form-group" id="sk">
+                <label for="skillField">Skills:</label>
+                <input type="text" class="form-control skillField" id="skillField">
+            </div>
+            
+            </form>
+        </div>
+       
+        
+        
+        <!---------professional details----->
+        <div class="professional-details">
+            <h1>professional details</h1>
+             <form action="">
+               
+                <!-------About------>
+                <div class="form-group">
+                    <label for="aboutField">About:</label>
+                    <textarea class="form-control" id="aboutField" rows="3"></textarea>
+                </div>
+               
+                <!--------Education------>
+                <div class="form-group" id="eq">
+                    <label for="educationField">Academic qualification:</label>
+                    <textarea class="form-control eqField" rows="2"></textarea>
+                    <textarea class="form-control eqField" rows="2"></textarea>
+                    <textarea class="form-control eqField" rows="2"></textarea>
+                    
+                </div>
+
+                <!--------Work experience------>
+                <div class="form-group" id="we">
+                    <label for="weField">Work experience:</label>
+                    <textarea class="form-control weField" rows="2"></textarea>
+                    <textarea class="form-control weField" rows="2"></textarea>
+                    <textarea class="form-control weField" rows="2"></textarea>
+        
+                </div>
+                <!--------hobbies-->
+                <div class="form-group">
+                    <label for="hField">Hobbies:</label>
+                    <textarea class="form-control" id="hField" rows="3" ></textarea>
+                </div>
+              </form>
+          </div>
+        </div>
+
+        <!-------generate button----->
+        <div class="generate-button">
+            <button onclick="generateCV()"class="btn">Generate resume</button>
+        </div>
+    </div>
+    </section>
+    
+
+    <!----resume template---->
+    <section id="section2">
+    <div class="container" id="resumetemplate">
+        <!------left side----->
+        <div class="resume-left">
+            <div class="resume-profile">
+                <img src="profile.png" alt="profile-pic">
+            </div>
+            <!--------content------->
+            <div class="resume-content">
+                <div class="resume_item resume_info">
+                    <div class="title">
+                        <p id="nameT1"class="bold">User name</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon"><i class="fas fa-map-signs"></i>
+                            </div>
+                            <div class="data">
+                                <p id="addressT">User's address__</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon"><i class="fas fa-phone"></i>
+                            </div>
+                            <div class="data">
+                                <p id="contactT">User's phone number__</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon"><i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="data">
+                                <p id="gmailT">User's gmail id__</p>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+            
+            
+            <div class="resume_item resume_social">
+                <div class="title">
+                    <p class="bold">Social</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="icon"><i class="fab fa-facebook-square"></i>
+                        </div>
+                        <div class="data">
+                            <p class="semi_bold">
+                                Facebook
+                            </p>
+                            <p><a id="fbT"href="#1"> facebook id </a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="data">
+                            <p class="semi_bold">
+                                Linkedin
+                            </p>
+                            <p><a id="linkedT" href="#1">User linkedin id </a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon"><i class="fab fa-github-square"></i>
+                        </div>
+                        <div class="data">
+                            <p class="semi_bold">
+                                Github
+                            </p>
+                            <p><a id="gitT" href="#1">User github id </a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+           
+            <div class="resume_item resume_skills">
+                <div class="title">
+                    <p class="bold">skill's</p>
+                </div>
+                <ul id="skillT">
+                    <li>
+                        <div class="skill_name">
+                            <p>skill 1</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill_name">
+                            <p>skill 2</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill_name">
+                           <p>skill 3</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+
+        
+        <div class="resume-right">
+            <div class="resume_item resume_about">
+                <div class="title">
+                    <p class="bold">About Me</p>
+                </div>
+                <div class="card-body">
+                    <p id="aboutT">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Voluptates ipsum nobis quaerat! Aliquid voluptate necessitatibus 
+                        voluptatum dolorem commodi fuga beatae. Quam, facilis 
+                        molestias numquam ab qui veniam architecto tempora voluptatum!
+                    </p>
+                </div>
+            </div>
+
+            <div class="resume_item resume_work">
+                <div class="title">
+                    <p class="bold">Work Experience</p>
+                </div>
+                <ul id="weT">
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, illo! </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, illo! </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="resume_item resume_education">
+                <div class="title">
+                    <p class="bold">Education</p>
+                </div>
+                <ul id="eqT">
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, ab!.</p>
+                            </div>
+                    </li>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, odio?</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, facilis!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info">
+                            <p class="semi_bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, eligendi? </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="resume_item resume_hobbies">
+                <div class="title">
+                    <p class="bold">Hobbies</p>
+                    <div class="card-body">
+                        <p id="hT">hobbies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="section3">
+        <div class="container">
+            <button class="btn2" id="download">Download</button>
+        </div>
+     </section>
+     
+    
+     
+     
+     
+     
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
